@@ -1,7 +1,7 @@
-set :deploy_to, '/home/deploy/www/SHORTNAME/staging'
+set :deploy_to, '/home/DEPLOY_USER/www/SHORTNAME/staging'
 
-role :app, %w{deploy@162.209.108.124}
-role :web, %w{deploy@162.209.108.124}
-role :db,  %w{deploy@162.209.108.124}
+role :app, %w{DEPLOY_USER@SERVER_IP}
+role :web, %w{DEPLOY_USER@SERVER_IP}
+role :db,  %w{DEPLOY_USER@SERVER_IP}
 
-server '162.209.108.124', user: 'deploy', roles: %w{web app}
+server 'SERVER_IP', user: 'DEPLOY_USER', roles: %w{web app}
